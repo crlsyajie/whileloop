@@ -1,0 +1,43 @@
+#include <iostream>
+#include <string>
+using namespace std;
+using s = string;
+
+void sen();
+
+int main() {
+
+        while (true) {
+        s x = "";
+        sen();
+        cout << "Would you like to be mocked again?: ";
+
+        getline(cin, x);
+        if (x == "no") {
+            cout << endl;
+            cout << "Suit yourself!";
+            break;
+        }
+
+        cout << endl;
+    }
+    return 0;
+}
+
+void sen() {
+
+    s sentence = "";
+    cout << "Enter in a sentence to be mocked!: " << endl;
+    getline(cin, sentence);
+
+
+    for (int i = 0; i < sentence.length(); i++) {
+        if (i % 2 == 0) {
+            cout << (char)toupper(sentence[i]);
+        }
+        else {
+            cout << (char)tolower(sentence[i]);
+        }
+    }
+    cout << endl;
+}
